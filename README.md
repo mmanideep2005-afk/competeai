@@ -93,4 +93,4 @@ MIT — see [LICENSE](LICENSE)
 
 ## Author
 
-Built by Makki as a portfolio project demonstrating multi-agent AI systems.
+Built by Manideep Makkina as a portfolio project demonstrating multi-agent AI systems.
