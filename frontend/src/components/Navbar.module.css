@@ -1,0 +1,55 @@
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 28px; height: 56px;
+  background: rgba(7,9,15,0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--font-display);
+  font-size: 16px; font-weight: 700; color: var(--text);
+}
+
+.logoMark {
+  width: 28px; height: 28px; border-radius: 7px;
+  background: linear-gradient(135deg, var(--accent), #c47018);
+  display: grid; place-items: center;
+}
+
+.right { display: flex; align-items: center; gap: 10px; }
+
+.liveBadge {
+  display: flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: 20px;
+  background: rgba(232,160,32,0.1);
+  border: 1px solid rgba(232,160,32,0.3);
+  font-family: var(--font-mono); font-size: 10.5px;
+  color: var(--accent);
+}
+
+.liveDot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent);
+  animation: blink 1s ease-in-out infinite;
+}
+
+.doneBadge {
+  padding: 4px 12px; border-radius: 20px;
+  background: rgba(45,212,160,0.08);
+  border: 1px solid rgba(45,212,160,0.25);
+  font-family: var(--font-mono); font-size: 10.5px;
+  color: var(--green);
+}
+
+.stackPill {
+  display: flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: 20px;
+  border: 1px solid var(--border-2);
+  font-family: var(--font-mono); font-size: 10px;
+  color: var(--text-2); letter-spacing: 0.04em;
+}
+
+.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }

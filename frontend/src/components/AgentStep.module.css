@@ -1,0 +1,87 @@
+.wrap {
+  display: flex; gap: 12px;
+  padding-bottom: 6px; position: relative;
+  margin-bottom: 4px;
+}
+
+.node {
+  display: flex; flex-direction: column; align-items: center;
+  flex-shrink: 0; padding-top: 10px;
+}
+
+.icon {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--surface-3); border: 1.5px solid var(--border-2);
+  display: grid; place-items: center;
+  color: var(--text-3); transition: all 0.3s;
+}
+
+.icon svg { width: 10px; height: 10px; }
+
+.line {
+  position: absolute; left: 10px; top: 40px; bottom: -4px;
+  width: 1.5px; background: var(--border-2); transition: background 0.4s;
+}
+
+.card {
+  flex: 1; background: var(--surface-2);
+  border: 1px solid var(--border); border-radius: 10px;
+  padding: 10px 13px; transition: all 0.3s;
+}
+
+.cardHeader {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.name {
+  font-family: var(--font-display); font-size: 13px;
+  font-weight: 600; color: var(--text);
+}
+
+.badge {
+  font-family: var(--font-mono); font-size: 9.5px;
+  letter-spacing: 0.06em; padding: 2px 7px;
+  border-radius: 4px; border: 1px solid var(--border-2);
+  color: var(--text-3); transition: all 0.3s;
+}
+
+.desc { font-size: 11.5px; color: var(--text-2); line-height: 1.4; }
+
+/* ── State modifiers ── */
+.state_running .icon {
+  background: rgba(232,160,32,0.15);
+  border-color: var(--accent); color: var(--accent);
+  animation: glow-pulse 1.5s ease-in-out infinite;
+}
+
+.state_running .card {
+  border-color: rgba(232,160,32,0.35);
+  background: rgba(232,160,32,0.04);
+}
+
+.state_running .line { background: linear-gradient(180deg, var(--accent), var(--border-2)); }
+
+.state_done .icon {
+  background: rgba(45,212,160,0.12);
+  border-color: var(--green); color: var(--green);
+}
+
+.state_done .line { background: var(--green); }
+
+.state_revising .icon {
+  background: rgba(245,185,66,0.12);
+  border-color: var(--yellow); color: var(--yellow);
+  animation: glow-pulse 1.5s ease-in-out infinite;
+}
+
+.state_revising .card {
+  border-color: rgba(245,185,66,0.35);
+  background: rgba(245,185,66,0.03);
+}
+
+/* Badges */
+.badgeIdle     { color: var(--text-3); border-color: var(--border); }
+.badgeRunning  { color: var(--accent); border-color: rgba(232,160,32,0.4); background: rgba(232,160,32,0.1); }
+.badgeDone     { color: var(--green); border-color: rgba(45,212,160,0.3); background: rgba(45,212,160,0.08); }
+.badgeRevising { color: var(--yellow); border-color: rgba(245,185,66,0.3); background: rgba(245,185,66,0.08); }

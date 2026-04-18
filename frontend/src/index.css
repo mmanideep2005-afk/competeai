@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+:root {
+  --bg:         #07090f;
+  --surface:    #0c1018;
+  --surface-2:  #111621;
+  --surface-3:  #171e2d;
+  --border:     #1a2235;
+  --border-2:   #222d42;
+  --accent:     #e8a020;
+  --accent-dim: rgba(232,160,32,0.12);
+  --accent-glow:rgba(232,160,32,0.06);
+  --purple:     #8b7cf8;
+  --green:      #2dd4a0;
+  --red:        #f06060;
+  --yellow:     #f5b942;
+  --text:       #dde6f8;
+  --text-2:     #7a8fae;
+  --text-3:     #384c68;
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 2px; }
+
+/* ── Grain overlay ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 160px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+}
+
+/* ── Animate in ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up { animation: fadeUp 0.4s ease both; }
+
+/* ── Pulse for loading nodes ── */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(232,160,32,0.3); }
+  50%       { box-shadow: 0 0 18px rgba(232,160,32,0.55); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}

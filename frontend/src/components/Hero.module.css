@@ -1,0 +1,119 @@
+.hero {
+  min-height: calc(100vh - 56px);
+  display: flex; align-items: center;
+  padding: 60px 0 80px;
+}
+
+.eyebrow {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); letter-spacing: 0.18em; text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.line {
+  display: inline-block; width: 36px; height: 1px;
+  background: var(--accent); opacity: 0.5;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5.5vw, 64px);
+  font-weight: 800; line-height: 1.06; letter-spacing: -0.03em;
+  color: #eef2ff; margin-bottom: 18px;
+}
+
+.accent {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--accent), #d47028);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sub {
+  font-size: 15px; font-weight: 300; color: var(--text-2);
+  max-width: 480px; margin: 0 auto 40px; line-height: 1.75;
+}
+
+.searchWrap { margin-bottom: 18px; }
+
+.searchBox {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--surface-2);
+  border: 1.5px solid var(--border-2);
+  border-radius: 14px; padding: 6px 6px 6px 18px;
+  max-width: 580px; margin: 0 auto;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.searchBox:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(232,160,32,0.08), 0 8px 32px rgba(0,0,0,0.35);
+}
+
+.input {
+  flex: 1; background: transparent; border: none; outline: none;
+  font-family: var(--font-body); font-size: 16px; color: var(--text);
+  caret-color: var(--accent); padding: 9px 0;
+}
+
+.input::placeholder { color: var(--text-3); }
+
+.btn {
+  display: flex; align-items: center; gap: 7px;
+  background: linear-gradient(135deg, var(--accent), #c47018);
+  border: none; border-radius: 10px;
+  padding: 11px 22px;
+  font-family: var(--font-display); font-size: 13px; font-weight: 700;
+  color: #07090f; letter-spacing: 0.04em; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(232,160,32,0.25);
+  transition: transform 0.1s, box-shadow 0.15s, opacity 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 22px rgba(232,160,32,0.35);
+}
+
+.btn:active:not(:disabled) { transform: scale(0.97); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.examples {
+  display: flex; align-items: center; gap: 8px;
+  flex-wrap: wrap; justify-content: center;
+}
+
+.exLabel {
+  font-family: var(--font-mono); font-size: 11px;
+  color: var(--text-3); margin-right: 2px;
+}
+
+.pill {
+  background: var(--surface-2); border: 1px solid var(--border-2);
+  border-radius: 20px; padding: 5px 14px;
+  font-family: var(--font-body); font-size: 13px;
+  color: var(--text-2); cursor: pointer;
+  transition: all 0.15s;
+}
+
+.pill:hover {
+  border-color: var(--accent); color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.featureCard {
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 12px; padding: 18px 16px; text-align: left;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.featureCard:hover { border-color: var(--border-2); transform: translateY(-2px); }
+
+.featureIcon { font-size: 22px; margin-bottom: 10px; }
+
+.featureTitle {
+  font-family: var(--font-display); font-size: 13px; font-weight: 700;
+  color: var(--text); margin-bottom: 5px;
+}
+
+.featureDesc { font-size: 12px; color: var(--text-2); line-height: 1.5; }

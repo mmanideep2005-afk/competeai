@@ -1,0 +1,10 @@
+langchain==0.2.16
+langchain-groq==0.1.9
+langchain-community==0.2.16
+langgraph==0.2.14
+mcp==1.0.0
+duckduckgo-search==6.2.6
+supabase==2.7.2
+beautifulsoup4==4.12.3
+requests==2.32.3
+python-dotenv==1.0.1
