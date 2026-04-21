@@ -34,8 +34,7 @@
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/YOURUSERNAME/competeai.git
-cd competeai
+git clone https://github.com/mmanideep2005-afk/competeai.git
 ```
 
 ### 2. Set up Python
